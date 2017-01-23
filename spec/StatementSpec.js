@@ -11,7 +11,7 @@ describe("Statement", function() {
     withdrawalOf20 = new Transaction();
     withdrawalOf20.withdrawFunds(20);
     account = new Account();
-    account.addTransaction(depositOf100)
+    account.addTransaction(depositOf100);
     account.addTransaction(withdrawalOf20);
     statement = new Statement(account);
   });
@@ -20,4 +20,11 @@ describe("Statement", function() {
     it("require an account when creating a statement", function() {expect(statement.showAccount()).toEqual(account);
     });
   });
+
+  describe("Showing the transactions", function(){
+    it("should show the transction array", function() {
+      expect(statement.showTransactions()).toEqual(jasmine.any(Array));
+    });
+  });
+
 });
