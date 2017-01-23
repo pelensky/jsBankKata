@@ -38,7 +38,6 @@ describe("Statement", function() {
     it("should print the entire statement", function(){
       expect(statement.printStatement()).toEqual();
     });
-
   });
 
 
