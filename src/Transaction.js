@@ -1,13 +1,11 @@
 function Transaction() {
   this.date = 0;
   this.amount = 0;;
-  this.balance = 0;
 }
 
 Transaction.prototype.depositFunds = function(amount) {
   this.amount = amount;
   this.date = this.formatDate();
-
 }
 
 Transaction.prototype.formatDate = function() {

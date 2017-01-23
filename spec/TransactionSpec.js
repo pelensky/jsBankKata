@@ -2,6 +2,12 @@ describe("Transaction", function() {
   var transaction;
   beforeEach(function() {
     transaction = new Transaction();
+    timerCallback = jasmine.createSpy("timerCallback");
+    jasmine.clock().install();
+  });
+
+  afterEach(function() {
+    jasmine.clock().uninstall();
   });
 
   it("should format dates correctly", function(){
