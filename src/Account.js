@@ -5,3 +5,7 @@ function Account() {
 Account.prototype.currentBalance = function() {
   return this.balance;
 };
+
+Account.prototype.addTransaction = function(transaction) {
+  this.transactions.push(transaction);
+}
