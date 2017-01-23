@@ -17,12 +17,10 @@ Statement.prototype.printTopLine = function() {
 Statement
 
 Statement.prototype.printTransactions = function() {
-  var account = this.showAccount();
-  var balance = account.currentBalance()
   var transactions = this.showTransactions();
   var array = [];
   for(i = 0; i < transactions.length; i ++) {
-    array.push(`${transactions[i].date} || ${transactions[i].deposit} || ${transactions[i].withdrawal} || ${balance}`)
+    array.push(`${transactions[i].date} || ${transactions[i].deposit} || ${transactions[i].withdrawal} || ${transactions[i].balance} `)
   }
   return array;
 };

@@ -1,18 +1,8 @@
 describe("Account", function() {
   var account;
-  var depositOf100;
-  var withdrawalOf20;
 
   beforeEach(function() {
     account = new Account();
-
-    depositOf100 = new Transaction();
-    depositOf100.depositFunds(100);
-
-    withdrawalOf20 = new Transaction();
-    withdrawalOf20.withdrawFunds(20);
-
-
   });
 
   describe("The app should", function(){
@@ -25,25 +15,30 @@ describe("Account", function() {
     });
   });
 
-  describe("Transactions should", function(){
-    it("be added", function() {
-      account.addTransaction(depositOf100);
-      expect(account.transactions).toEqual([depositOf100]);
-    });
-  });
-
   describe("Deposits should", function(){
+
     it("increase the balance", function() {
-      account.addTransaction(depositOf100);
-      expect(account.currentBalance()).toEqual(100);
+      account.deposit(10);
+      expect(account.currentBalance()).toEqual(10);
+    });
+
+    it("keep a record of the balance at the time", function() {
+      account.deposit(10);
+      account.deposit(20);
+      expect(account.showTransactions()[1].balance).toEqual(30);
     });
   });
 
   describe("Withdrawals should", function(){
     it("decrease the balance", function() {
-      account.addTransaction(depositOf100)
-      account.addTransaction(withdrawalOf20);
+      account.deposit(100);
+      account.withdraw(20);
       expect(account.currentBalance()).toEqual(80);
+    });
+    it("keep a record of the balance at the time", function() {
+      account.deposit(100);
+      account.withdraw(20);
+      expect(account.showTransactions()[1].balance).toEqual(80);
     });
   });
 

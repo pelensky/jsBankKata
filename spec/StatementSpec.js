@@ -5,14 +5,9 @@ describe("Statement", function() {
   var withdrawalOf20;
 
   beforeEach(function() {
-
-    depositOf100 = new Transaction();
-    depositOf100.depositFunds(100);
-    withdrawalOf20 = new Transaction();
-    withdrawalOf20.withdrawFunds(20);
     account = new Account();
-    account.addTransaction(depositOf100);
-    account.addTransaction(withdrawalOf20);
+    account.deposit(100);
+    account.withdraw(20);
     statement = new Statement(account);
   });
 

@@ -3,8 +3,7 @@ function Transaction() {
   this.deposit = 0;
   this.withdrawal = 0;
   this.balance = 0;
-
-}
+};
 
 Transaction.prototype.formatDate = function() {
   var date = new Date();
@@ -12,16 +11,14 @@ Transaction.prototype.formatDate = function() {
   var month = ("0" + (date.getMonth() + 1)).slice(-2)
   var year = date.getFullYear();
   return `${day}/${month}/${year}`
-}
+};
 
 Transaction.prototype.depositFunds = function(amount) {
   this.deposit = amount;
   this.date = this.formatDate();
-  this.balance += amount;
-}
+};
 
 Transaction.prototype.withdrawFunds = function(amount) {
   this.withdrawal = amount;
   this.date = this.formatDate();
-  this.balance -= amount;
-}
+};
