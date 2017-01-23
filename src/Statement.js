@@ -18,7 +18,7 @@ Statement.prototype.printTransactions = function() {
   var transactions = this.showTransactions();
   var array = [];
   for(i = 0; i < transactions.length; i ++) {
-    array.push(`${transactions[i].date} || ${transactions[i].deposit} || ${transactions[i].withdrawal} || ${transactions[i].balance} `)
+    array.push(`${transactions[i].date} || ${transactions[i].deposit.toFixed(2)} || ${transactions[i].withdrawal.toFixed(2)} || ${transactions[i].balance.toFixed(2)} `)
   }
   return array;
 };
