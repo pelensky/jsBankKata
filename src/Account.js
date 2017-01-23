@@ -8,5 +8,6 @@ Account.prototype.currentBalance = function() {
 
 Account.prototype.addTransaction = function(transaction) {
   this.balance += transaction.deposit;
+  this.balance -= transaction.withdrawal;
   this.transactions.push(transaction);
 }

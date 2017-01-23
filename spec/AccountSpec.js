@@ -1,12 +1,17 @@
 describe("Account", function() {
   var account;
   var depositOf100;
+  var withdrawalOf20;
 
   beforeEach(function() {
     account = new Account();
 
     depositOf100 = new Transaction();
-    depositOf100.depositFunds(1000);
+    depositOf100.depositFunds(100);
+
+    withdrawalOf20 = new Transaction();
+    withdrawalOf20.withdrawFunds(20);
+
 
   });
 
@@ -30,7 +35,15 @@ describe("Account", function() {
   describe("Deposits should", function(){
     it("increase the balance", function() {
       account.addTransaction(depositOf100);
-      expect(account.balance).toEqual(1000);
+      expect(account.balance).toEqual(100);
+    });
+  });
+
+  describe("Withdrawals should", function(){
+    it("decrease the balance", function() {
+      account.addTransaction(depositOf100)
+      account.addTransaction(withdrawalOf20);
+      expect(account.balance).toEqual(80);
     });
   });
 
