@@ -6,6 +6,10 @@ Account.prototype.currentBalance = function() {
   return this.balance;
 };
 
+Account.prototype.showTransactions = function() {
+  return this.transactions;
+}
+
 Account.prototype.addTransaction = function(transaction) {
   this.balance += transaction.deposit;
   this.balance -= transaction.withdrawal;

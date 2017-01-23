@@ -21,7 +21,7 @@ describe("Account", function() {
     });
 
     it("initialize with no transactions", function(){
-      expect(account.transactions).toEqual([]);
+      expect(account.showTransactions()).toEqual([]);
     });
   });
 
@@ -35,7 +35,7 @@ describe("Account", function() {
   describe("Deposits should", function(){
     it("increase the balance", function() {
       account.addTransaction(depositOf100);
-      expect(account.balance).toEqual(100);
+      expect(account.currentBalance()).toEqual(100);
     });
   });
 
@@ -43,7 +43,7 @@ describe("Account", function() {
     it("decrease the balance", function() {
       account.addTransaction(depositOf100)
       account.addTransaction(withdrawalOf20);
-      expect(account.balance).toEqual(80);
+      expect(account.currentBalance()).toEqual(80);
     });
   });
 
