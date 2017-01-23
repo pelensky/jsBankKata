@@ -22,7 +22,7 @@ describe("Transaction", function() {
 
     it("track the date the deposit was made", function(){
       transaction.depositFunds(1000);
-      expect(transaction.date).toEqual("23/01/2017");
+      expect(transaction.date).toEqual(transaction.formatDate());
     });
   });
 
@@ -34,7 +34,7 @@ describe("Transaction", function() {
 
     it("track the date the withdrawal was made", function(){
       transaction.withdrawFunds(20);
-      expect(transaction.date).toEqual("23/01/2017");
+      expect(transaction.date).toEqual(transaction.formatDate());
     });
   });
 });
