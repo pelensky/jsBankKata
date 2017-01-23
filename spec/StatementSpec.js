@@ -39,7 +39,4 @@ describe("Statement", function() {
       expect(statement.printStatement()).toEqual();
     });
   });
-
-
-
 });
