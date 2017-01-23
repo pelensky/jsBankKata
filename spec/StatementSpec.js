@@ -28,7 +28,7 @@ describe("Statement", function() {
     });
 
     it("should output out the transactions correctly", function() {
-      expect(statement.printTransactions()).toEqual([ '23/01/2017 || 100.00 || 0.00 || 100.00 ', '23/01/2017 || 0.00 || 20.00 || 80.00 ' ])
+      expect(statement.printTransactions()).toEqual([ '23/01/2017 || 100.00 ||        || 100.00 ', '23/01/2017 ||        || 20.00 || 80.00 ' ])
     });
 
     it("should change the array to a string", function(){
