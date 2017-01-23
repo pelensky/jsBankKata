@@ -22,7 +22,7 @@ Statement.prototype.printTransactions = function() {
   for(i = 0; i < transactions.length; i ++) {
     var date = transactions[i].date;
     var deposit = transactions[i].deposit.toFixed(2);
-    if(deposit == 0){
+    if(deposit == 0.00){
       deposit = "       ";
     }
     var withdrawal = transactions[i].withdrawal.toFixed(2);

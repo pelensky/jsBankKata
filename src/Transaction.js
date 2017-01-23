@@ -1,5 +1,4 @@
 // Responsible for transactions (deposits and withdrawals)
-
 function Transaction() {
   this.date = 0;
   this.deposit = 0;
@@ -9,7 +8,7 @@ function Transaction() {
 
 Transaction.prototype.formatDate = function() {
   var date = new Date();
-  var day = date.getDate();
+  var day = ("0" + (date.getDate())).slice(-2)
   var month = ("0" + (date.getMonth() + 1)).slice(-2)
   var year = date.getFullYear();
   return `${day}/${month}/${year}`
