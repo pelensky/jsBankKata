@@ -4,8 +4,10 @@ describe("Account", function() {
 
   beforeEach(function() {
     account = new Account();
+
     depositOf100 = new Transaction();
-    depositOf100.depositFunds(20);
+    depositOf100.depositFunds(1000);
+
   });
 
   describe("The app should", function(){
@@ -24,4 +26,12 @@ describe("Account", function() {
       expect(account.transactions).toEqual([depositOf100]);
     });
   });
+
+  describe("Deposits should", function(){
+    it("increase the balance", function() {
+      account.addTransaction(depositOf100);
+      expect(account.balance).toEqual(1000);
+    });
+  });
+
 });
