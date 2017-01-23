@@ -15,3 +15,8 @@ Transaction.prototype.formatDate = function() {
   var year = date.getFullYear();
   return `${day}/${month}/${year}`
 }
+
+Transaction.prototype.withdrawFunds = function(amount) {
+  this.amount = amount;
+  this.date = this.formatDate();
+}

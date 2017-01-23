@@ -9,19 +9,33 @@ describe("Transaction", function() {
   afterEach(function() {
     jasmine.clock().uninstall();
   });
+  describe("The app should", function(){
+    it("format dates correctly", function(){
+      expect(transaction.formatDate()).toEqual("23/01/2017");
+    });
+  });
+  describe("While adding funds - the app should", function(){
+    it("record deposited funds", function() {
+      transaction.depositFunds(1000);
+      expect(transaction.amount).toEqual(1000);
+    });
 
-  it("should format dates correctly", function(){
-    expect(transaction.formatDate()).toEqual("23/01/2017");
+    it("track the date the deposit was made", function(){
+      transaction.depositFunds(1000);
+      expect(transaction.date).toEqual("23/01/2017");
+    });
   });
 
-  it("should record deposited funds", function() {
-    transaction.depositFunds(1000);
-    expect(transaction.amount).toEqual(1000);
-  });
+  describe("While subtracting funds - the app should", function(){
+    it("record withdrawn funds", function() {
+      transaction.withdrawFunds(20);
+      expect(transaction.amount).toEqual(20);
+    });
 
-  it("should track when a deposit was made", function(){
-    transaction.depositFunds(1000);
-    expect(transaction.date).toEqual("23/01/2017");
-  });
+    it("track the date the withdrawal was made", function(){
+      transaction.withdrawFunds(20);
+      expect(transaction.date).toEqual("23/01/2017");
+    });
 
+  });
 });
