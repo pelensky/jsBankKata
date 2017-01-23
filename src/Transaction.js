@@ -1,16 +1,16 @@
-function Deposit() {
+function Transaction() {
   this.date = 0;
   this.amount = 0;;
   this.balance = 0;
 }
 
-Deposit.prototype.addFunds = function(amount) {
+Transaction.prototype.depositFunds = function(amount) {
   this.amount = amount;
   this.date = this.formatDate();
 
 }
 
-Deposit.prototype.formatDate = function() {
+Transaction.prototype.formatDate = function() {
   var date = new Date();
   var day = date.getDate();
   var month = ("0" + (date.getMonth() + 1)).slice(-2)
