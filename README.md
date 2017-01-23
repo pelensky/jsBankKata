@@ -15,7 +15,7 @@ Instructions
 * Print statement by calling - `statement.printStatement();`
 * The following will be outputted to the console log:
 ```
-     date    ||  credit  ||  debit  || balance
+   date    ||  credit  ||  debit  || balance
 23/01/2017 ||  100.00  ||         || 100.00
 23/01/2017 ||          ||  20.00  || 80.00
 ```
