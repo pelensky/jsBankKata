@@ -27,9 +27,16 @@ describe("Statement", function() {
       expect(statement.printTopLine()).toEqual(" date || credit || debit || balance ");
     });
 
-    it("Should print out the transactions correctly", function() {
+    it("should output out the transactions correctly", function() {
       expect(statement.printTransactions()).toEqual([ '23/01/2017 || 100 || 0 || 100 ', '23/01/2017 || 0 || 20 || 80 ' ])
     });
+
+    it("should change the array to a string", function(){
+      expect(statement.printString()).toEqual(jasmine.any(String));
+    });
+
   });
+
+
 
 });

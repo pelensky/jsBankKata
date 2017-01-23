@@ -14,8 +14,6 @@ Statement.prototype.printTopLine = function() {
   return(" date || credit || debit || balance ")
 };
 
-Statement
-
 Statement.prototype.printTransactions = function() {
   var transactions = this.showTransactions();
   var array = [];
@@ -23,4 +21,9 @@ Statement.prototype.printTransactions = function() {
     array.push(`${transactions[i].date} || ${transactions[i].deposit} || ${transactions[i].withdrawal} || ${transactions[i].balance} `)
   }
   return array;
+};
+
+Statement.prototype.printString = function(){
+var transactionsArray = this.printTransactions();
+return transactionsArray.join(('\r\n'))
 };
