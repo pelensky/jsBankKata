@@ -9,3 +9,7 @@ Statement.prototype.showAccount = function() {
 Statement.prototype.showTransactions = function() {
   return this.showAccount().showTransactions();
 };
+
+Statement.prototype.printTopLine = function() {
+  return(" date || credit || debit || balance ")
+};

@@ -27,4 +27,10 @@ describe("Statement", function() {
     });
   });
 
+  describe("Printing transactions", function(){
+    it("Top line should be formatted correctly", function() {
+      expect(statement.printTopLine()).toEqual(" date || credit || debit || balance ");
+    });
+  });
+
 });
