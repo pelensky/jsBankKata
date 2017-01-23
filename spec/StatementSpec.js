@@ -12,8 +12,8 @@ describe("Statement", function() {
     statement = new Statement(account);
   });
 
-  describe("The app should", function(){
-    it("require an account when creating a statement", function() {expect(statement.showAccount()).toEqual(account);
+  describe("The statement ", function(){
+    it("requires an account when creating a statement object", function() {expect(statement.showAccount()).toEqual(account);
     });
   });
 

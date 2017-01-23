@@ -5,7 +5,7 @@ describe("Account", function() {
     account = new Account();
   });
 
-  describe("The app should", function(){
+  describe("The account should", function(){
     it("initialize with a balance of zero", function() {
       expect(account.currentBalance()).toEqual(0);
     });

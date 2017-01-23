@@ -9,7 +9,7 @@ describe("Transaction", function() {
   afterEach(function() {
     jasmine.clock().uninstall();
   });
-  describe("The app should", function(){
+  describe("The transactions should", function(){
     it("format dates correctly", function(){
       expect(transaction.formatDate()).toEqual("23/01/2017");
     });
