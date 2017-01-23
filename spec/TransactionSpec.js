@@ -24,6 +24,11 @@ describe("Transaction", function() {
       transaction.depositFunds(1000);
       expect(transaction.date).toEqual("23/01/2017");
     });
+
+    it("track the balance at the time", function(){
+      transaction.depositFunds(1000);
+      expect(transaction.balance).toEqual(1000);
+    });
   });
 
   describe("While subtracting funds - the app should", function(){
@@ -35,6 +40,12 @@ describe("Transaction", function() {
     it("track the date the withdrawal was made", function(){
       transaction.withdrawFunds(20);
       expect(transaction.date).toEqual("23/01/2017");
+    });
+
+    it("track the balance at the time", function(){
+      transaction.depositFunds(100);
+      transaction.withdrawFunds(20);
+      expect(transaction.balance).toEqual(80);
     });
   });
 });
