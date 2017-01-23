@@ -28,7 +28,7 @@ describe("Statement", function() {
     });
 
     it("Should print out the transactions correctly", function() {
-      expect(statement.printTransactions()).toEqual()
+      expect(statement.printTransactions()).toEqual([ '23/01/2017 || 100 || 0 || 100 ', '23/01/2017 || 0 || 20 || 80 ' ])
     });
   });
 
