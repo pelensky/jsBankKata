@@ -24,7 +24,7 @@ describe("Statement", function() {
 
   describe("Printing transactions", function(){
     it("Top line should be formatted correctly", function() {
-      expect(statement.printTopLine()).toEqual(" date || credit || debit || balance ");
+      expect(statement.printTopLine()).toEqual("   date    || credit || debit || balance ");
     });
 
     it("should output out the transactions correctly", function() {
@@ -33,6 +33,10 @@ describe("Statement", function() {
 
     it("should change the array to a string", function(){
       expect(statement.printString()).toEqual(jasmine.any(String));
+    });
+
+    it("should print the entire statement", function(){
+      expect(statement.printStatement()).toEqual();
     });
 
   });

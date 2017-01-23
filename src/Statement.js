@@ -11,7 +11,7 @@ Statement.prototype.showTransactions = function() {
 };
 
 Statement.prototype.printTopLine = function() {
-  return(" date || credit || debit || balance ")
+  return("   date    || credit || debit || balance ")
 };
 
 Statement.prototype.printTransactions = function() {
@@ -26,4 +26,8 @@ Statement.prototype.printTransactions = function() {
 Statement.prototype.printString = function(){
 var transactionsArray = this.printTransactions();
 return transactionsArray.join(('\r\n'))
+};
+
+Statement.prototype.printStatement = function(){
+  console.log(this.printTopLine(), this.printString());
 };
