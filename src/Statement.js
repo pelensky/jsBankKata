@@ -18,14 +18,18 @@ Statement.prototype.printTransactions = function() {
   var transactions = this.showTransactions();
   var array = [];
   for(i = 0; i < transactions.length; i ++) {
-    array.push(`${transactions[i].date} || ${transactions[i].deposit.toFixed(2)} || ${transactions[i].withdrawal.toFixed(2)} || ${transactions[i].balance.toFixed(2)} `)
+    var date = transactions[i].date;
+    var deposit = transactions[i].deposit.toFixed(2);
+    var withdrawal = transactions[i].withdrawal.toFixed(2);
+    var balance = transactions[i].balance.toFixed(2);
+    array.push(`${date} || ${deposit} || ${withdrawal} || ${balance} `)
   }
   return array;
 };
 
 Statement.prototype.printString = function(){
-var transactionsArray = this.printTransactions();
-return transactionsArray.join(('\r\n'))
+  var transactionsArray = this.printTransactions();
+  return transactionsArray.join(('\r\n'))
 };
 
 Statement.prototype.printStatement = function(){
