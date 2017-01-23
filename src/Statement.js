@@ -1,3 +1,5 @@
+// Responsible for printing the statement
+
 function Statement(account) {
   this.account = account;
 }
@@ -11,7 +13,7 @@ Statement.prototype.showTransactions = function() {
 };
 
 Statement.prototype.printTopLine = function() {
-  return("   date    ||  credit  ||  debit  || balance ")
+  return("   date    ||  credit  ||  debit  || balance \n");
 };
 
 Statement.prototype.printTransactions = function() {
@@ -28,14 +30,14 @@ Statement.prototype.printTransactions = function() {
       withdrawal = "      ";
     }
     var balance = transactions[i].balance.toFixed(2);
-    array.push(`${date} ||  ${deposit} ||  ${withdrawal} || ${balance} `)
+    array.push(`${date} ||  ${deposit} ||  ${withdrawal} || ${balance} `);
   }
   return array;
 };
 
 Statement.prototype.printString = function(){
   var transactionsArray = this.printTransactions();
-  return transactionsArray.join(('\r\n'))
+  return transactionsArray.join(('\r\n'));
 };
 
 Statement.prototype.printStatement = function(){

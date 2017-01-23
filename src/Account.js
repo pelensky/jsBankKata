@@ -1,3 +1,5 @@
+// The customer's account - manipulate the balance and transactions from here
+
 function Account() {
   this.balance = 0;
   this.transactions = [];

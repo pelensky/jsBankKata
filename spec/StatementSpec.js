@@ -25,7 +25,7 @@ describe("Statement", function() {
 
   describe("Printing transactions", function(){
     it("Top line should be formatted correctly", function() {
-      expect(statement.printTopLine()).toEqual("   date    ||  credit  ||  debit  || balance ");
+      expect(statement.printTopLine()).toEqual("   date    ||  credit  ||  debit  || balance \n");
     });
 
     it("should output out the transactions correctly", function() {

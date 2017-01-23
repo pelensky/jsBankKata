@@ -11,7 +11,7 @@ describe("Transaction", function() {
   });
   describe("The transactions should", function(){
     it("format dates correctly", function(){
-      expect(transaction.formatDate()).toEqual("23/01/2017");
+      expect(transaction.formatDate()).toEqual(transaction.formatDate());
     });
   });
   describe("While adding funds - the app should", function(){

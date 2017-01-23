@@ -2,7 +2,7 @@
 ### Tech Test Week
 ### Week Ten
 
-The purpose of this project is to complete a tech test in a day. I chose to complete this tech test in Javascript, a I feel less comfortable in it than I do in Ruby.
+The purpose of this project is to complete a tech test in a day. I chose to complete this tech test in Javascript, as I feel less comfortable in it than I do in Ruby.
 
 Instructions
 -------

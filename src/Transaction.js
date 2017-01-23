@@ -1,3 +1,5 @@
+// Responsible for transactions (deposits and withdrawals)
+
 function Transaction() {
   this.date = 0;
   this.deposit = 0;
