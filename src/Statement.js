@@ -41,5 +41,5 @@ Statement.prototype.printString = function(){
 };
 
 Statement.prototype.printStatement = function(){
-  console.log(this.printTopLine(), this.printString());
+  console.log(this.printTopLine(),this.printString());
 };

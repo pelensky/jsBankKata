@@ -1,8 +1,6 @@
 describe("Statement", function() {
   var statement;
   var account;
-  var depositOf100;
-  var withdrawalOf20;
 
   beforeEach(function() {
     account = new Account();
@@ -28,8 +26,8 @@ describe("Statement", function() {
       expect(statement.printTopLine()).toEqual("   date    ||  credit  ||  debit  || balance \n");
     });
 
-    it("should output out the transactions correctly", function() {
-      expect(statement.printTransactions()).toEqual([ '23/01/2017 ||  1000.00 ||         || 1000.00 ', '23/01/2017 ||  2000.00 ||         || 3000.00 ', '23/01/2017 ||          ||  500.00 || 2500.00 ' ]);
+    it("should output out the transactions correctly in an array format", function() {
+      expect(statement.printTransactions()).toEqual(jasmine.any(Array));
     });
 
     it("should change the array to a string", function(){
